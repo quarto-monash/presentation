@@ -1,23 +1,27 @@
 ---
-title: My great presentation with a title that is far too long
+title: My great presentation
 author: Hypatia of Alexandria
 date: today
-toc: true
-format:
+toc: false
+format: # Use only one of these
+  presentation-typst: default
   presentation-beamer: default
   presentation-revealjs+letterbox: default
 ---
 
 ```{r}
 #| label: load-packages
+#| include: false
 library(knitr)
 library(ggplot2)
 library(dplyr)
+options(width = 70)
 ```
 
 # Goals
 
 ## Goals
+
 
 The main goals for this slide:
 
@@ -64,7 +68,7 @@ $$
 
 ```{r}
 #| echo: true
-mtcars
+mtcars |> as_tibble() |> head()
 ```
 
 
