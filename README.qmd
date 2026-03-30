@@ -12,7 +12,11 @@ library(quarto)
 library(magick)
 
 # Render the template
-quarto_render(input = "template.qmd")
+quarto_render(
+  input = "template.qmd",
+  output_format = c("presentation-revealjs+letterbox", "presentation-typst"),
+  metadata = list(`bg-path` = "_extensions/presentation/_images/background/")
+)
 # Convert rendered PDF to PNG (first page only)
 image_read_pdf("template.pdf", density = 200)[1] |>
   #image_montage(geometry = "x600+15+15", tile = 1, bg = "grey92", shadow = TRUE) |>
