@@ -51,6 +51,7 @@
   }
 }
 
+
 // Content slide: injects the blue title bar via the setting wrapper.
 #let slide(
   config: (:), repeat: auto, setting: body => body, composer: auto, ..bodies,
@@ -137,7 +138,7 @@
   toc:           false,
   toc-title:     "Outline",
   fontsize:      22pt,
-  bg-path:       "_extensions/presentation/_images/background/",
+  bg-path: none,
   doc,
 ) = {
   let img-path = if titlegraphic == none { bg-path + "bg-02.png" }
